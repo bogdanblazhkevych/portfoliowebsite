@@ -41,9 +41,10 @@
     padding-right: calc(100vw / 50);
     transform: translateY(10%);
     opacity: 0;
-    transition-property: transform, opacity;
+    transition: transform 500ms ease-in-out, opacity 500ms ease-in-out;
+    /* transition-property: transform, opacity;
     transition-duration: 500ms, 500ms;
-    transition-timing-function: ease-in-out, ease-in-out;
+    transition-timing-function: ease-in-out, ease-in-out; */
 }
 
 .line{
@@ -73,9 +74,10 @@
     font-size: calc(100vw / 70);
     transform: translateY(10%);
     opacity: 0;
-    transition-property: transform, opacity;
+    transition: transform 500ms ease-in-out, opacity 500ms ease-in-out;
+    /* transition-property: transform, opacity;
     transition-duration: 500ms, 500ms;
-    transition-timing-function: ease-in-out, ease-in-out;
+    transition-timing-function: ease-in-out, ease-in-out; */
 }
 
 .linkswrapper{
@@ -88,9 +90,10 @@
     font-weight: 800;
     transform: translateY(10%);
     opacity: 0;
-    transition-property: transform, opacity;
+    transition: transform 500ms ease-in-out, opacity 500ms ease-in-out;
+    /* transition-property: transform, opacity;
     transition-duration: 500ms, 500ms;
-    transition-timing-function: ease-in-out, ease-in-out;
+    transition-timing-function: ease-in-out, ease-in-out; */
 }
 
 .linkswrapper > div:hover{

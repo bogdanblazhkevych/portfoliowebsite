@@ -57,9 +57,10 @@
     align-items: center;
     transform: translate(0, 10%) scaleX(1);
     opacity: 0%;
-    transition-property: transform, opacity;
+    transition: transform 300ms ease-in-out, opacity 300ms ease-in-out;
+    /* transition-property: transform, opacity;
     transition-duration: 300ms, 300ms;
-    transition-timing-function: ease-in-out, ease-in-out;
+    transition-timing-function: ease-in-out, ease-in-out; */
 }
 
 .project1heading:hover{
@@ -83,9 +84,10 @@
     order: 2;
     justify-content: end;
     filter: grayscale(100%) brightness(0.2);
-    transition-property: filter;
+    transition: filter 300ms ease-in-out;
+    /* transition-property: filter;
     transition-duration: 0.3s; 
-    transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out; */
 }
 
 /* .spinwrapper{
@@ -114,9 +116,10 @@
     aspect-ratio: 960 / 540;
     width: 90%;
     filter: grayscale(100%) brightness(0.2);
-    transition-property: filter;
+    transition: filter 300ms ease-in-out;
+    /* transition-property: filter;
     transition-duration: 0.3s; 
-    transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out; */
 }
 
 .freeimg:hover{
@@ -127,9 +130,10 @@
     aspect-ratio: 960 / 540;
     width: 90%;
     filter: grayscale(100%) brightness(0.7);
-    transition-property: filter;
+    transition: filter 300ms ease-in-out;
+    /* transition-property: filter;
     transition-duration: 0.3s; 
-    transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out; */
     /* filter: brightness(0.2); */
     /* align-self: flex-start; */
 }

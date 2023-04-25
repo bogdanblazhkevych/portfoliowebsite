@@ -84,14 +84,14 @@ export default function LoadAnimation({setInitialLoadingFinished}){
                 <svg ref={bordersvg} className={loadanimationcss.logosvg}>{<rect></rect>}</svg>
 
                 <div className={loadanimationcss.firstname}>
-                    {firstNameArray.map((letter) => {
-                        return <span>{letter}</span>
+                    {firstNameArray.map((letter, index) => {
+                        return <span key={"first" + index}>{letter}</span>
                     })}
                 </div>
 
                 <div className={loadanimationcss.lastname}>
-                    {lastNameArray.map((letter) => {
-                        return <span>{letter}</span>
+                    {lastNameArray.map((letter, index) => {
+                        return <span key={"last" + index}>{letter}</span>
                     })}
                 </div>
                 

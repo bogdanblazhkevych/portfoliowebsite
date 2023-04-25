@@ -24,6 +24,7 @@
     width: var(--textboxwidth);
     opacity: 0;
     /* transition: opacity, 2s; */
+    /* transition: width 1s, opacity 2s; */
     transition-property: width, opacity;
     transition-duration: 1s, 2s;
     background-color: rgb(17,18,21);

@@ -13,7 +13,6 @@ function App() {
 
   const [initialLoadingFinished, setInitialLoadingFinished] = useState(false)
   const [navLoadingFinished, setNavLoadingFinished] = useState(false)
-  const [introLoadingFinished, setIntroLoadingFinished] = useState(false)
   const [aboutRef, setAboutRef] = useState()
   const [projectsRef, setProjectsRef] = useState()
   const [contactRef, setContactRef] = useState()
@@ -27,6 +26,8 @@ function App() {
       })
     }
   }
+
+  // "homepage": "http//:bogdanblazhkevych.github.io/portfoliowebsite",
 
   return (
     <div className="App">

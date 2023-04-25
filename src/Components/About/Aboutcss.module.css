@@ -26,9 +26,7 @@
     width: 49%;
     opacity: 0%;
     transform: translate(0, 10%);
-    transition-property: opacity, transform;
-    transition-duration: 500ms, 500ms;
-    transition-timing-function: ease-in-out, ease-in-out;
+    transition: opacity 500ms ease-in-out, transform 500ms ease-in-out;
 }
 
 .textboxwrapper{
@@ -54,9 +52,10 @@
     font-size: calc(100vw / 25);
     transform: translate(10%, 5%);
     opacity: 0;
-    transition-property: transform, opacity;
+    transition: transform 500ms ease-in, opacity 500ms ease-in;
+    /* transition-property: transform, opacity;
     transition-duration: 500ms, 500ms;
-    transition-timing-function: ease-in, ease-in;
+    transition-timing-function: ease-in, ease-in; */
 }
 
 .line{
@@ -79,27 +78,30 @@
 .p1{
     transform: translateY(15%) scale(0.95);
     opacity: 0;
-    transition-property: transform, opacity;
+    transition: transform 500ms ease-in, opacity 500ms ease-in;
+    /* transition-property: transform, opacity;
     transition-duration: 500ms, 500ms;
-    transition-timing-function: ease-in, ease-in;
+    transition-timing-function: ease-in, ease-in; */
 }
 
 .p2{
     transform: translateY(15%) scale(0.95);
     opacity: 0;
-    transition-property: transform, opacity;
+    transition: transform 500ms ease-in 100ms, opacity 500ms ease-in 100ms;
+    /* transition-property: transform, opacity;
     transition-duration: 500ms, 500ms;
     transition-delay: 100ms, 100ms;
-    transition-timing-function: ease-in, ease-in;
+    transition-timing-function: ease-in, ease-in; */
 }
 
 .p3{
     transform: translateY(15%) scale(0.95);
     opacity: 0;
-    transition-property: transform, opacity;
+    transition: transform 500ms ease-in 200ms, opacity 500ms ease-in 200ms;
+    /* transition-property: transform, opacity;
     transition-duration: 500ms, 500ms;
     transition-delay: 200ms, 200ms;
-    transition-timing-function: ease-in, ease-in;
+    transition-timing-function: ease-in, ease-in; */
 }
 
 @media only screen and (max-width: 800px) {

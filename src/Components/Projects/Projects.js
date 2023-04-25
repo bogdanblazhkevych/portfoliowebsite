@@ -1,4 +1,4 @@
-import React, {useEffect, useState, useRef} from "react"
+import React, {useEffect, useRef} from "react"
 import projectscss from "./projectscss.module.css"
 import { FaReact, FaHtml5, FaCss3Alt, FaGithub, FaNpm, FaCodepen } from 'react-icons/fa'
 import { IoLogoJavascript } from 'react-icons/io'
@@ -33,26 +33,29 @@ export default function Projects({navLoadingFinished, setProjectsRef}) {
 
     useEffect(() => {
 
+        const projectwrap = projectswrapper.current
+
         if (navLoadingFinished === false) {
             // projectswrapper.current.style.visibility = "hidden"
             // projectswrapper.current.style.height = "5px"
             // projectswrapper.current.style.overflowY = "hidden"
-            projectswrapper.current.style.display = "none"
-            projectswrapper.current.style.position = "absolute"
+            projectwrap.style.display = "none"
+            projectwrap.style.position = "absolute"
         } else {
             // projectswrapper.current.style.visibility = "visible"
             // projectswrapper.current.style.height = ""
             // projectswrapper.current.style.overflowY = "visible"
-            projectswrapper.current.style.display = "flex"
-            projectswrapper.current.style.position = "relative"
+            projectwrap.style.display = "flex"
+            projectwrap.style.position = "relative"
             setProjectsRef(projectswrapper)
         }
 
-    }, [navLoadingFinished]);
+    }, [navLoadingFinished, setProjectsRef]);
 
 
     useEffect(() => {
         let refsArr = [titletext, titleline, project1, project2, project3];
+        const projectwrap = projectswrapper.current;
 
         if(navLoadingFinished === false){
             return
@@ -76,14 +79,14 @@ export default function Projects({navLoadingFinished, setProjectsRef}) {
           { threshold: 0.5 } // Define the threshold for intersection
         );
     
-        if (projectswrapper.current) {
+        if (projectwrap.current) {
         //   observer.observe(projectswrapper.current);
           refsArr.forEach((element) => observer.observe(element.current)) 
         }
     
         // Cleanup the observer on component unmount
         return () => {
-          if (projectswrapper.current) {
+          if (projectwrap) {
             // observer.unobserve(projectswrapper.current);
             refsArr.forEach((element) => observer.unobserve(element.current))
           }
@@ -140,7 +143,7 @@ export default function Projects({navLoadingFinished, setProjectsRef}) {
                 <div className={projectscss.project} ref={project1}>
 
                     <div className={projectscss.project1imgwrapper}>
-                        <img src={freeimg} className={projectscss.freeimg}></img>
+                        <img alt="website screenshot" src={freeimg} className={projectscss.freeimg}></img>
                     </div>
 
                     <div className={projectscss.project1descwrapper}>
@@ -273,7 +276,7 @@ export default function Projects({navLoadingFinished, setProjectsRef}) {
                 <div className={projectscss.project} ref={project3}>
 
                     <div className={projectscss.project1imgwrapper}>
-                        <img src={fccimg} className={projectscss.fccimg}/>
+                        <img alt="second website screenshot" src={fccimg} className={projectscss.fccimg}/>
                     </div>
 
                     <div className={projectscss.project1descwrapper}>

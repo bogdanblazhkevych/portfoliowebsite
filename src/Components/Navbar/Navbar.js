@@ -2,7 +2,7 @@ import React from "react";
 import navbarcss from "./Navbarcss.module.css"
 import logo from "./logo.png"
 import resume from "./../Static/resume.pdf"
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 
 export default function Navbar({initialLoadingFinished, setNavLoadingFinished, scrollToTarget, about, projects, contact}){
     const navbarwrapper = useRef(null)
@@ -13,6 +13,16 @@ export default function Navbar({initialLoadingFinished, setNavLoadingFinished, s
     const listitem4 = useRef(null)
 
     useEffect(()=> {
+
+        async function loadNav(){
+            let arr = [logoref, listitem1, listitem2, listitem3, listitem4]
+            arr.forEach((element)=> {
+                element.current.style.transform = "translateX(0px)"
+            })
+            await delay(500)
+            setNavLoadingFinished(true)
+    
+        }
 
         if (initialLoadingFinished === false) {
             // navbarwrapper.current.style.visibility = "hidden"
@@ -28,17 +38,7 @@ export default function Navbar({initialLoadingFinished, setNavLoadingFinished, s
             // })
         }
 
-    }, [initialLoadingFinished])
-
-    async function loadNav(){
-        let arr = [logoref, listitem1, listitem2, listitem3, listitem4]
-        arr.forEach((element)=> {
-            element.current.style.transform = "translateX(0px)"
-        })
-        await delay(500)
-        setNavLoadingFinished(true)
-
-    }
+    }, [initialLoadingFinished, setNavLoadingFinished])
 
     async function delay(duration) {
         return new Promise((resolve) => {
@@ -90,7 +90,7 @@ export default function Navbar({initialLoadingFinished, setNavLoadingFinished, s
             <div className={navbarcss.navbar}>
 
                 <div className={navbarcss.logowrapper} ref={logoref}>
-                    <img src={logo} className={navbarcss.logoimage}></img>
+                    <img alt="logo" src={logo} className={navbarcss.logoimage}></img>
                 </div>
 
                 <div className={navbarcss.navlist}>
