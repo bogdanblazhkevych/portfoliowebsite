@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfoliowebsite/static/css/main.3f21baf3.css",
-    "main.js": "/portfoliowebsite/static/js/main.352f89fd.js",
+    "main.js": "/portfoliowebsite/static/js/main.07fb1639.js",
     "static/media/freeinquotes.com_.png": "/portfoliowebsite/static/media/freeinquotes.com_.fc70b0cf54920761a273.png",
     "static/media/glasses-16.jpg": "/portfoliowebsite/static/media/glasses-16.b447fed4cce91e7bebb1.jpg",
     "static/media/glasses-3.jpg": "/portfoliowebsite/static/media/glasses-3.ccc776d6b343f9d5172b.jpg",
@@ -23,10 +23,10 @@
     "static/media/resume.pdf": "/portfoliowebsite/static/media/resume.5728229bfb0c16f8becf.pdf",
     "index.html": "/portfoliowebsite/index.html",
     "main.3f21baf3.css.map": "/portfoliowebsite/static/css/main.3f21baf3.css.map",
-    "main.352f89fd.js.map": "/portfoliowebsite/static/js/main.352f89fd.js.map"
+    "main.07fb1639.js.map": "/portfoliowebsite/static/js/main.07fb1639.js.map"
   },
   "entrypoints": [
     "static/css/main.3f21baf3.css",
-    "static/js/main.352f89fd.js"
+    "static/js/main.07fb1639.js"
   ]
 }
