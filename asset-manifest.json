@@ -24,7 +24,7 @@
     "index.html": "/portfoliowebsite/index.html",
     "main.3f21baf3.css.map": "/portfoliowebsite/static/css/main.3f21baf3.css.map",
     "main.31f642cd.js.map": "/portfoliowebsite/static/js/main.31f642cd.js.map",
-    "trident.glb": "/trident.glb"
+    "/portfoliowebsite/trident.glb": "/trident.glb"
   },
   "entrypoints": [
     "static/css/main.3f21baf3.css",
