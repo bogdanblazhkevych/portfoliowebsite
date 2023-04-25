@@ -1,0 +1,114 @@
+.animationwrapper{
+    /* border: 1px solid red; */
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 100%;
+    transition: opacity 1s ease-in-out;
+}
+
+.textbox{
+    /* color: white; */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: calc(100vw / 20);
+    font-weight: 300;
+    /* border: 1px solid blue; */
+    color: white;
+    /* transition: width, 5s; */
+    display: flex;
+    justify-content: space-between;
+    width: var(--textboxwidth);
+    opacity: 0;
+    /* transition: opacity, 2s; */
+    transition-property: width, opacity;
+    transition-duration: 1s, 2s;
+    background-color: rgb(17,18,21);
+    padding-right: 10px;
+}
+
+.hiddentext{
+    /* color: white; */
+    font-size: calc(100vw / 20);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 300;
+    position: absolute;
+    opacity: 0;
+}
+
+.lastname{
+    position: relative;
+    /* border: 1px solid magenta; */
+}
+
+.moveb{
+    border: 1px solid green;
+    box-sizing: border-box;
+    background-color: inherit;
+    /* position: absolute;
+    left: 0px; */
+}
+
+.spandelete{
+    opacity: 100%;
+    transition: opacity, 1s;
+}
+
+.bordersvg, rect{
+    display: block;
+    position: absolute;
+    width: calc(var(--bordersvgwidth) * 1.7);
+    height: calc(var(--bordersvgheight) * 1.2);
+    fill: transparent;
+    stroke: white;
+    stroke-width: calc(100vw / 200);
+    stroke-dasharray: calc(100vw / 3);
+    stroke-dashoffset: calc(100vw / 3);
+    animation: draw 0.5s linear forwards;
+    z-index: -1;
+}
+
+.bordersvg{
+    transform: translate(2%, 20%);
+    
+}
+
+svg{
+    display: none;
+}
+
+@keyframes draw {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+/* .bordersvg > rect{
+    stroke: yellow;
+    stroke-width: 4;
+} */
+
+/* @keyframes deletespan {
+    0% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0%;
+    }
+} */
+
+@keyframes moveSpan {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+.spandelete{
+    display: inline;
+}

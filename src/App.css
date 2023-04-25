@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+.App{
+  display: flex;
+  flex-direction: column;
+  /* overflow: auto; 
+  -ms-overflow-style: none; 
+  scrollbar-width: none; */
+}
+html::-webkit-scrollbar {
+  width: 0px;
+  display: none;
+}
+
+html::-webkit-scrollbar {
+  width: 0px;
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+
+
+.main{
+  width: 100vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .list{
+  --listdelay: 2s
+  transform: translateY(-6vh);
+  transition: transform 1s;
+  transition-delay: var(--listdelay)
+} */
+
+/* .list:nth-child(2){
+  transition-delay: calc(var(--listdelay) + 100ms);
+}
+
+.list:nth-child(3){
+  transition-delay: calc(var(--listdelay) + 200ms);
+}
+
+.list:nth-child(4){
+  transition-delay: calc(var(--listdelay) + 300ms);
+} */
