@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfoliowebsite/static/css/main.3f21baf3.css",
-    "main.js": "/portfoliowebsite/static/js/main.07fb1639.js",
+    "main.css": "/portfoliowebsite/static/css/main.91430229.css",
+    "main.js": "/portfoliowebsite/static/js/main.0627562d.js",
     "static/media/freeinquotes.com_.png": "/portfoliowebsite/static/media/freeinquotes.com_.fc70b0cf54920761a273.png",
     "static/media/glasses-16.jpg": "/portfoliowebsite/static/media/glasses-16.b447fed4cce91e7bebb1.jpg",
     "static/media/glasses-3.jpg": "/portfoliowebsite/static/media/glasses-3.ccc776d6b343f9d5172b.jpg",
@@ -20,13 +20,13 @@
     "static/media/glasses-13.jpg": "/portfoliowebsite/static/media/glasses-13.06f400cece37eefbeaa0.jpg",
     "static/media/glasses-9.jpg": "/portfoliowebsite/static/media/glasses-9.67a1d0f6b15aa938e906.jpg",
     "static/media/codepen.io_lilbogdaddy_full_ZERyORG.png": "/portfoliowebsite/static/media/codepen.io_lilbogdaddy_full_ZERyORG.3ae6190be2d759fea0a3.png",
-    "static/media/resume.pdf": "/portfoliowebsite/static/media/resume.5728229bfb0c16f8becf.pdf",
+    "static/media/resume.pdf": "/portfoliowebsite/static/media/resume.8010c49bcdd6947a90be.pdf",
     "index.html": "/portfoliowebsite/index.html",
-    "main.3f21baf3.css.map": "/portfoliowebsite/static/css/main.3f21baf3.css.map",
-    "main.07fb1639.js.map": "/portfoliowebsite/static/js/main.07fb1639.js.map"
+    "main.91430229.css.map": "/portfoliowebsite/static/css/main.91430229.css.map",
+    "main.0627562d.js.map": "/portfoliowebsite/static/js/main.0627562d.js.map"
   },
   "entrypoints": [
-    "static/css/main.3f21baf3.css",
-    "static/js/main.07fb1639.js"
+    "static/css/main.91430229.css",
+    "static/js/main.0627562d.js"
   ]
 }
