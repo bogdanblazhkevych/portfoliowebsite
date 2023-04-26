@@ -64,7 +64,7 @@ export default function LoadAnimation({setInitialLoadingFinished}){
         setTextLoaded(true)
         await delay(700)
         textbox.current.style.setProperty("--textboxwidth", targetWidth + "px");
-        await delay(600)
+        await delay(1000)
         bordersvg.current.style.setProperty("--bordersvgwidth", hiddentext.current.offsetWidth + "px");
         bordersvg.current.style.setProperty("--bordersvgheight", hiddentext.current.offsetHeight + "px");
         bordersvg.current.classList.add(loadanimationcss.bordersvg)

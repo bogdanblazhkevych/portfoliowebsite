@@ -57,16 +57,10 @@ export default function Contact({navLoadingFinished, setContactRef}) {
         const arr = [text, desc, links];
         lineleft.current.style.transform = "scaleX(1)"
         lineright.current.style.transform = "scaleX(1)"
-        // arr.forEach((element => {
-        //     element.current.style.opacity = "100%"
-        //     element.current.style.transform = "translateY(0)"
-        // }))
-        text.current.style.opacity = "100%"
-        text.current.style.transform = "translateY(0)"
-        desc.current.style.opacity = "100%"
-        desc.current.style.transform = "translateY(0)"
-        links.current.style.opacity = "100%"
-        links.current.style.transform = "translateY(0)"
+        arr.forEach((element => {
+            element.current.style.opacity = "100%"
+            element.current.style.transform = "translateY(0)"
+        }))
     }
 
     return(

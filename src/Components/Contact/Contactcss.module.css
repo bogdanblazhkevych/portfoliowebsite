@@ -1,5 +1,4 @@
 .contactwrapper{
-    /* border: 1px solid red; */
     box-sizing: border-box;
     width: 100vw;
     height: 100vh;
@@ -10,7 +9,6 @@
 }
 
 .contact{
-    /* border: 1px solid blue; */
     box-sizing: border-box;
     width: 80%;
     display: flex;
@@ -21,7 +19,6 @@
 }
 
 .textbox{
-    /* border: 1px solid yellow; */
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
@@ -42,9 +39,6 @@
     transform: translateY(10%);
     opacity: 0;
     transition: transform 500ms ease-in-out, opacity 500ms ease-in-out;
-    /* transition-property: transform, opacity;
-    transition-duration: 500ms, 500ms;
-    transition-timing-function: ease-in-out, ease-in-out; */
 }
 
 .line{
@@ -64,20 +58,15 @@
 }
 
 .descbox{
-    /* border: 1px solid purple; */
     box-sizing: border-box;
     text-align: center;
     font-family: 'Montserrat';
     font-weight: 800;
-    /* width: 60%; */
     color: rgba(255, 255, 255, 0.5);
     font-size: calc(100vw / 70);
     transform: translateY(10%);
     opacity: 0;
     transition: transform 500ms ease-in-out, opacity 500ms ease-in-out;
-    /* transition-property: transform, opacity;
-    transition-duration: 500ms, 500ms;
-    transition-timing-function: ease-in-out, ease-in-out; */
 }
 
 .linkswrapper{
@@ -91,9 +80,6 @@
     transform: translateY(10%);
     opacity: 0;
     transition: transform 500ms ease-in-out, opacity 500ms ease-in-out;
-    /* transition-property: transform, opacity;
-    transition-duration: 500ms, 500ms;
-    transition-timing-function: ease-in-out, ease-in-out; */
 }
 
 .linkswrapper > div:hover{

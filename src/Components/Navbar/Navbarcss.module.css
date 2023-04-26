@@ -1,40 +1,31 @@
 .navbarwrapper{
-    /* border: 1px solid red; */
-    /* --setopacity: 0%; */
     box-sizing: border-box;
     width: 100vw;
     display: flex;
     justify-content: center;
-    margin-top: calc(100vw / 50);
-    /* padding-right: 4vw;
-    padding-left: 4vw;
-    padding-top: 15px; */
-    /* opacity: 0%; */
-    transition: opacity 2s ease-in-out;
-    /* margin-bottom: 15px; */
-    /* border: 1px solid blue; */
-    /* height: 70px; */
-
-    /* border: 1px solid red; */
+    padding-top: calc(100vw / 50);
+    padding-bottom: calc(100vw / 50);
+    background-color: rgba(17,18,21, 0.2);
+    backdrop-filter: blur(10px);
+    top: 0;
+    z-index: 100;
+    transition: opacity 2s ease-in-out, transform 0.5s;
 }
 .navbar{
     padding: 10%, 10%, 10%, 10%;
     width: 80%;
-    /* border: 1px solid purple; */
     display: flex;
     justify-content: space-between;
 }
 
 .navlist{
     font-family: 'Montserrat';
-    /* width: 30%; */
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: calc(100vh / 50);
     gap: calc(100vw / 90);
-    /* border: 1px solid blue; */
 }
 
 .navlist div:hover{
@@ -46,7 +37,6 @@
     transform: translateY(-300%);
     transition: transform 1000ms;
     transition-delay: 600ms;
-    /* border: 1px solid red; */
 }
 
 .listitem2{
@@ -70,7 +60,6 @@
 .logowrapper{
     width: 5%;
     min-width: 60px;
-    /* aspect-ratio: 196 / 131; */
     transform: translateY(-200%);
     transition: transform 1000ms;
     transition-delay: 500ms;

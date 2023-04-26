@@ -3,10 +3,8 @@ import { Suspense } from "react";
 import { Trident } from "../../Trident";
 import aboutcss from "./Aboutcss.module.css"
 import { Canvas } from "@react-three/fiber";
-import { AmbientLight } from "three";
 
 export default function About({navLoadingFinished, setAboutRef}) {
-
     const aboutWrapper = useRef(null)
     const textboxwrapper = useRef(null);
     const headingtext = useRef(null);
@@ -57,14 +55,11 @@ export default function About({navLoadingFinished, setAboutRef}) {
     }, [navLoadingFinished]);
 
     function animateDivs() {
-        // headingtext.current.style.opacity = "100";
-        // headingtext.current.style.transform = "translate(0, 0)"
         line.current.style.transform = "scaleX(1)"
         let arr = [headingtext, p1, p2, p3, trident]
         arr.forEach((element) => {
             element.current.style.opacity = "100%";
             element.current.style.transform = "translate(0, 0) scale(1)";
-
         })
     }
 
@@ -115,15 +110,19 @@ export default function About({navLoadingFinished, setAboutRef}) {
 
 
                 <div className={aboutcss.tridentwrapper} ref={trident}>
+
                     <Canvas>
 
                         <Suspense fallback={null}>
+
                             <Trident />
+
                         </Suspense>
-                    {/* <hemisphereLight /> */}
-                    {/* <ambientLight /> */}
-                    <pointLight position={[0, 20, 10]} intensity={1.5}/>
+
+                        <pointLight position={[0, 20, 10]} intensity={1.5}/>
+
                     </Canvas>
+                    
                 </div>
                 
             </div>

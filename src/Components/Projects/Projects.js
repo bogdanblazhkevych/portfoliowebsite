@@ -64,7 +64,7 @@ export default function Projects({navLoadingFinished, setProjectsRef}) {
           (entries) => {
             entries.forEach((entry) => {
               if (entry.isIntersecting) {
-                // console.log(entry.target.style)
+                console.log(entry.target.style)
                 if (entry.target.id !== "line") {
                     entry.target.style.transform = "translate(0, 0)"
                     entry.target.style.opacity = "100%"
@@ -79,7 +79,7 @@ export default function Projects({navLoadingFinished, setProjectsRef}) {
           { threshold: 0.5 } // Define the threshold for intersection
         );
     
-        if (projectwrap.current) {
+        if (projectwrap) {
         //   observer.observe(projectswrapper.current);
           refsArr.forEach((element) => observer.observe(element.current)) 
         }
@@ -103,17 +103,6 @@ export default function Projects({navLoadingFinished, setProjectsRef}) {
         } else {
             return 220
         }
-
-
-        // if (viewport < 1100) {
-        //     return 200
-        // } else if (viewport < 950) {
-        //     return 50
-        // } 
-        
-        // else {
-        //     return 220
-        // }
     }
 
     function handleLinks(e) {
@@ -157,7 +146,7 @@ export default function Projects({navLoadingFinished, setProjectsRef}) {
                             <div className={projectscss.project1desc}>
                                 Landing page I developed for "FREE", a Brooklyn based clothing brand.
                                 Featuring a responsive layout, animated menu, and a custom product viewer, 
-                                users can brows the collection and checkout through the shopify payment portal.
+                                users can browse the collection and checkout through the shopify payment portal.
                             </div>
 
                         </div>
@@ -289,7 +278,7 @@ export default function Projects({navLoadingFinished, setProjectsRef}) {
 
                             <div className={projectscss.project1desc}>
                                 freeCodeCamp was where I started my software engineering journey. I packeged all 
-                                5 frontent projects: quote generator, markdown, calculator, drum machine, and 
+                                5 frontend projects: quote generator, markdown, calculator, drum machine, and 
                                 clock into one pen. The most notable part being the knob component for the drum 
                                 machine I created from scratch.
                             </div>

@@ -27,8 +27,6 @@ function App() {
     }
   }
 
-  // "homepage": "http//:bogdanblazhkevych.github.io/portfoliowebsite",
-
   return (
     <div className="App">
       <Navbar initialLoadingFinished={initialLoadingFinished} setNavLoadingFinished={setNavLoadingFinished} scrollToTarget={scrollToTarget} about={aboutRef} projects={projectsRef} contact={contactRef}/> {/* set to initialLoadingFinished*/}

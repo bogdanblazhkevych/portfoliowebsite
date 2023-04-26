@@ -3,8 +3,9 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 
+
 export function Trident(props) {
-  const { nodes, materials } = useGLTF("/trident.glb");
+  const { nodes, materials } = useGLTF("./trident.glb");
   const trident = useRef(null)
 
   useFrame(() => {
@@ -28,4 +29,4 @@ export function Trident(props) {
   );
 }
 
-useGLTF.preload("/trident.glb");
+useGLTF.preload("trident.glb");

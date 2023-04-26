@@ -16,7 +16,6 @@ export default function Intro({navLoadingFinished}) {
         } else {
             infowrapper.current.style.visibility = "visible"
             infowrapper.current.style.position = "relative"
-            // infowrapper.current.style.opacity = "100"
             let arr = [nameref, descriptionref, shortdescref]
             arr.forEach((element) => {
                 element.current.style.transform = "translateY(0px)"
@@ -35,7 +34,6 @@ export default function Intro({navLoadingFinished}) {
 
                     <div className={introcss.name} ref={nameref}>
                         Bogdan Blazhkevych()
-                        {/* <div className={introcss.selectorbox}></div> */}
                     </div>
                     <div className={introcss.description} ref={descriptionref}>
                         Developing Web Developer
