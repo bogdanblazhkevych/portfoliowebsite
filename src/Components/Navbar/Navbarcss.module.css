@@ -20,6 +20,7 @@
 
 .navlist{
     font-family: 'Montserrat';
+    /* border: 1px solid blue; */
     color: white;
     display: flex;
     justify-content: space-between;
@@ -71,4 +72,12 @@
 .logoimage{
     width: 100%;
     aspect-ratio: 196 / 131;
+}
+
+@media only screen and (max-width: 800px){
+    .navlist{
+        transform: translateY(-200%);
+        transition: transform 1000ms;
+        transition-delay: 700ms;
+    }
 }

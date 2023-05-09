@@ -1,0 +1,30 @@
+
+.boxwrapper{
+    width: 5vw;
+    
+    /* aspect-ratio: 1/0.8; */
+}
+
+.box{
+    min-width: 40px;
+    width: 100%;
+    aspect-ratio: 1/0.6;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.line{
+    width: 100%;
+    height: 2px;
+    background-color: white;
+}
+
+.line:nth-child(2){
+    width: 80%;
+    align-self: flex-end;
+}
+.line:nth-child(3){
+    width: 60%;
+    align-self: flex-end;
+}

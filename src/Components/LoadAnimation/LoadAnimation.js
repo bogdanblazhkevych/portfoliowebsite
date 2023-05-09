@@ -6,17 +6,21 @@ import loadanimationcss from "./loadanimationcss.module.css"
 export default function LoadAnimation({setInitialLoadingFinished}){
 
     const animationwrapper = useRef(null);
+    const rectsvg = useRef(null);
     const textbox = useRef(null);
     const hiddentext = useRef(null);
     const bordersvg = useRef(null);
     const [lastNameArray, setLastNameArray] = useState(["B", "l", "a", "z", "h", "k", "e", "v", "y", "c", "h"])
-    const [firstNameArray, setFirstNameArray] = useState(["B", "o", "g", "d", "a", "n"])
+    const [firstNameArray, setFirstNameArray] = useState(["B", "o", "g", "d", "a", "n", " "])
     const [textLoaded, setTextLoaded] = useState(false)
 
     useEffect(()=> {
         const twoletterwidth = hiddentext.current.offsetWidth;
         const initialtextboxwidth = textbox.current.offsetWidth;
-        textbox.current.style.setProperty("--textboxwidth", initialtextboxwidth + "px");
+        animationwrapper.current.style.setProperty("--strokedashvar", (window.innerWidth / 2) + "px")
+        animationwrapper.current.style.setProperty("--textboxwidth", initialtextboxwidth + "px");
+        animationwrapper.current.style.setProperty("--bordersvgwidth", hiddentext.current.offsetWidth + "px");
+        animationwrapper.current.style.setProperty("--bordersvgheight", hiddentext.current.offsetHeight + "px");
         loadText(twoletterwidth)
         
     }, [])
@@ -65,9 +69,13 @@ export default function LoadAnimation({setInitialLoadingFinished}){
         await delay(700)
         textbox.current.style.setProperty("--textboxwidth", targetWidth + "px");
         await delay(1000)
-        bordersvg.current.style.setProperty("--bordersvgwidth", hiddentext.current.offsetWidth + "px");
-        bordersvg.current.style.setProperty("--bordersvgheight", hiddentext.current.offsetHeight + "px");
-        bordersvg.current.classList.add(loadanimationcss.bordersvg)
+        // bordersvg.current.style.setProperty("--bordersvgwidth", hiddentext.current.offsetWidth + "px");
+        // bordersvg.current.style.setProperty("--bordersvgheight", hiddentext.current.offsetHeight + "px");
+        // bordersvg.current.classList.add(loadanimationcss.bordersvg)
+        // rectsvg.current.classList.add(loadanimationcss.rectsvganimated)
+        // rectsvg.current.classList.add(loadanimationcss.rectsvg)
+        // rectsvg.current.style.animation = "draw 1s linear forwards"
+        rectsvg.current.style.opacity = "100%";
         await delay(1000)
         animationwrapper.current.style.position = "absolute"
         animationwrapper.current.style.opacity = "0%"
@@ -81,10 +89,13 @@ export default function LoadAnimation({setInitialLoadingFinished}){
 
             <div className={loadanimationcss.textbox} ref={textbox}>
 
-                <svg ref={bordersvg} className={loadanimationcss.logosvg}>{<rect></rect>}</svg>
+                <svg ref={bordersvg}>
+                    <rect ref={rectsvg} className={loadanimationcss.rectsvg}></rect>
+                </svg>
 
                 <div className={loadanimationcss.firstname}>
                     {firstNameArray.map((letter, index) => {
+                        if (letter === " ") { return <span key={"firstempty"}>&nbsp;</span>}
                         return <span key={"first" + index}>{letter}</span>
                     })}
                 </div>

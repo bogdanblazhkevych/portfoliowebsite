@@ -8,6 +8,7 @@
     align-items: center;
     opacity: 100%;
     transition: opacity 1s ease-in-out;
+    
 }
 
 .textbox{
@@ -22,7 +23,7 @@
     transition-property: width, opacity;
     transition-duration: 1s, 2s;
     background-color: rgb(17,18,21);
-    padding-right: 10px;
+    /* padding-right: calc(var(--textboxwidth) * 0.1); */
 }
 
 .hiddentext{
@@ -48,7 +49,8 @@
     transition: opacity, 1s;
 }
 
-.bordersvg, rect{
+/* .bordersvg, rect{
+    visibility: visible;
     display: block;
     position: absolute;
     width: calc(var(--bordersvgwidth) * 1.7);
@@ -58,24 +60,53 @@
     stroke-width: calc(100vw / 200);
     stroke-dasharray: calc(100vw / 3);
     stroke-dashoffset: calc(100vw / 3);
-    animation: draw 0.5s linear forwards;
+    animation: draw 1s linear forwards;
     z-index: -1;
-}
+} */
 
 .bordersvg{
-    transform: translate(2%, 20%);
-    
+    transform: translate(2%, 20%); 
+}
+
+.rectsvg{
+    opacity: 0;
+    display: block;
+    width: calc(var(--bordersvgwidth) * 1.7);
+    height: calc(var(--bordersvgheight) * 1.2);
+    fill: transparent;
+    stroke: white;
+    stroke-width: calc(100vw / 200);
+    stroke-dasharray: var(--strokedashvar);
+    stroke-dashoffset: var(--strokedashvar);
+    /* animation: var(--setanimation); */
+    z-index: -1;
+    /* -webkit-animation: draw 1s linear forwards;
+    -webkit-animation-delay: 4200ms; */
+    animation: draw 1s linear forwards;
+    animation-delay: 4200ms;
 }
 
 svg{
-    display: none;
+    position: absolute;
+    width: calc(var(--bordersvgwidth) * 1.7);
+    height: calc(var(--bordersvgheight) * 1.2);
+    transform: translate(2%, 20%); 
+    z-index: -1;
+    
 }
 
+
+
+
 @keyframes draw {
-    to {
-      stroke-dashoffset: 0;
+    0% {
+        stroke-dashoffset: var(--strokedashvar);
     }
-  }
+
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
 
 @keyframes moveSpan {
     0% {

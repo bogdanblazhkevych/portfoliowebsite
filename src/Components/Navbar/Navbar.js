@@ -3,9 +3,12 @@ import navbarcss from "./Navbarcss.module.css"
 import logo from "./logo.png"
 import resume from "./../Static/resume.pdf"
 import { useEffect, useRef, useState } from "react";
+import Dropdown from "../Dropdown/Dropdown";
 
 export default function Navbar({initialLoadingFinished, setNavLoadingFinished, scrollToTarget, about, projects, contact}){
     const [scrollDirection, setScrollDirection] = useState("none")
+    const [mobile, setMobile] = useState(false)
+    const navlist = useRef(null)
     const navbarwrapper = useRef(null)
     const logoref = useRef(null)
     const listitem1 = useRef(null)
@@ -14,6 +17,10 @@ export default function Navbar({initialLoadingFinished, setNavLoadingFinished, s
     const listitem4 = useRef(null)
 
     useEffect(()=> {
+        if (window.innerWidth < 750) {
+            setMobile(true)
+        }
+
         let prevScroll = window.pageYOffset;
 
         function handleScroll(){
@@ -30,13 +37,29 @@ export default function Navbar({initialLoadingFinished, setNavLoadingFinished, s
 
         async function loadNav(){
             let arr = [logoref, listitem1, listitem2, listitem3, listitem4]
-            arr.forEach((element)=> {
-                element.current.style.transform = "translateX(0px)"
-            })
+            if (!mobile) {
+                arr.forEach((element)=> {
+                    element.current.style.transform = "translateX(0px)"
+                })
+            } else {
+                navlist.current.style.transform = "translateY(0)"
+                logoref.current.style.transform = "translateY(0)"
+            }
+
+            // let arr;
+            // if (!mobile) {
+            //     arr = [logoref, navlist]
+            // } else {
+            //     arr = [logoref, listitem1, listitem2, listitem3, listitem4]
+            // }
+
+            // arr.forEach((element) => {
+            //     element.current.style.transform = "translate(0px))"
+            // })
+
             await delay(500)
             setNavLoadingFinished(true)
             window.addEventListener("scroll", handleScroll);
-    
         }
 
         if (initialLoadingFinished === false) {
@@ -94,24 +117,30 @@ export default function Navbar({initialLoadingFinished, setNavLoadingFinished, s
 
                 </div>
 
-                <div className={navbarcss.navlist}>
+                <div className={navbarcss.navlist} ref={navlist}>
 
-                    <div className={navbarcss.listitem1} ref={listitem1} onClick={handleClick} id="about">
-                        About
-                    </div >
+                    {mobile ? <Dropdown /> : 
+                        <>
+                        
+                            <div className={navbarcss.listitem1} ref={listitem1} onClick={handleClick} id="about">
+                                About
+                            </div >
 
-                    <div className={navbarcss.listitem2} ref={listitem2} onClick={handleClick} id="projects">
-                        Projects
-                    </div>
+                            <div className={navbarcss.listitem2} ref={listitem2} onClick={handleClick} id="projects">
+                                Projects
+                            </div>
 
-                    <div className={navbarcss.listitem3} ref={listitem3} onClick={handleClick} id="contact">
-                        Contact
-                    </div>
+                            <div className={navbarcss.listitem3} ref={listitem3} onClick={handleClick} id="contact">
+                                Contact
+                            </div>
 
-                    <div className={navbarcss.listitem4} ref={listitem4} onClick={handleClick} id={resume}>
-                        Resume
-                    </div>
-
+                            <div className={navbarcss.listitem4} ref={listitem4} onClick={handleClick} id={resume}>
+                                Resume
+                            </div>
+                        
+                        </>
+                    }
+                    
                 </div>
 
             </div>
