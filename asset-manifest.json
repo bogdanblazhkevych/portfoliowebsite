@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.91430229.css",
-    "main.js": "/static/js/main.0312c0d3.js",
+    "main.css": "/static/css/main.6f294e34.css",
+    "main.js": "/static/js/main.1820285d.js",
     "static/media/freeinquotes.com_.png": "/static/media/freeinquotes.com_.fc70b0cf54920761a273.png",
     "static/media/glasses-16.jpg": "/static/media/glasses-16.b447fed4cce91e7bebb1.jpg",
     "static/media/glasses-3.jpg": "/static/media/glasses-3.ccc776d6b343f9d5172b.jpg",
@@ -22,11 +22,11 @@
     "static/media/codepen.io_lilbogdaddy_full_ZERyORG.png": "/static/media/codepen.io_lilbogdaddy_full_ZERyORG.3ae6190be2d759fea0a3.png",
     "static/media/resume.pdf": "/static/media/resume.8010c49bcdd6947a90be.pdf",
     "index.html": "/index.html",
-    "main.91430229.css.map": "/static/css/main.91430229.css.map",
-    "main.0312c0d3.js.map": "/static/js/main.0312c0d3.js.map"
+    "main.6f294e34.css.map": "/static/css/main.6f294e34.css.map",
+    "main.1820285d.js.map": "/static/js/main.1820285d.js.map"
   },
   "entrypoints": [
-    "static/css/main.91430229.css",
-    "static/js/main.0312c0d3.js"
+    "static/css/main.6f294e34.css",
+    "static/js/main.1820285d.js"
   ]
 }
